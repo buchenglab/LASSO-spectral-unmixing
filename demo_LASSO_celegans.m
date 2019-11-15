@@ -49,10 +49,10 @@ Comp3 = copt(:,:,3);
 Comp4 = copt(:,:,4);
 %}
 
-Comp1 = imadjust(uint8(255.*Comp1/(max(max(Comp1))-min(min(Comp1)))));
-Comp2 = imadjust(uint8(255.*Comp2/(max(max(Comp2))-min(min(Comp2)))));
-Comp3 = imadjust(uint8(255.*Comp3/(max(max(Comp3))-min(min(Comp3)))));
-Comp4 = imadjust(uint8(255.*Comp4/(max(max(Comp4))-min(min(Comp4)))));
+Comp1 = imadjust(uint8(255.*(Comp1 - min(Comp1(:) ))/(max(Comp1(:))-min(Comp1(:) ))));
+Comp2 = imadjust(uint8(255.*(Comp2 - min(Comp2(:) ))/(max(Comp2(:))-min(Comp2(:) ))));
+Comp3 = imadjust(uint8(255.*(Comp3 - min(Comp3(:) ))/(max(Comp3(:))-min(Comp3(:) ))));
+Comp4 = imadjust(uint8(255.*(Comp4 - min(Comp4(:) ))/(max(Comp4(:))-min(Comp4(:) ))));
 
 rgbComp1 = cat(3, Comp1*0.5, Comp1*0, Comp1*0.5); % magneta for oxidized lipid
 rgbComp2 = cat(3, Comp2*1, Comp2*0, Comp2*0); % red for nucleus
