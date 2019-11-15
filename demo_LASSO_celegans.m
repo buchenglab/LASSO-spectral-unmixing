@@ -31,10 +31,6 @@ lambda = 0.6e1;
 copt = C_ML_Lasso( y, celegans_spec_init',lambda);
 sopt = celegans_spec_init;
 
-%% Run MCR main code GUI
-addpath('./ALS routines');
-run mcr_main.m;
-
 %% Plot the results
 % Plot the concentration maps first
 %{
