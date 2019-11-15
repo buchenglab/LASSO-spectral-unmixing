@@ -27,7 +27,6 @@ clear size_x size_y size_lambda temp temp_column i img;
 rmpath('Data/CElegans');
 
 %% Run LASSO
-addpath('Code/');
 lambda = 0.6e1;
 copt = C_ML_Lasso( y, celegans_spec_init',lambda);
 sopt = celegans_spec_init;
